@@ -13,7 +13,7 @@ const InitUser = () => {
     async function verifyUser(){
         console.log("init user ran");
         console.log("this is the token : " , localStorage.getItem("token"));
-        const response = await axios.get("http://localhost:3000/api/v1/user/me" , {
+        const response = await axios.get("https://todo-app-in-ts-5.onrender.com/api/v1/user/me" , {
             headers: {
                 'Content-Type': 'application/json',
                 'token' : localStorage.getItem("token")

@@ -18,7 +18,7 @@ const Home = () => {
   const setTodos = useSetRecoilState(todos);
   useEffect(()=>{
     async function getTodos(){
-      const response = await axios.get("http://localhost:3000/api/v1/todo/getAllTodos",{
+      const response = await axios.get("https://todo-app-in-ts-5.onrender.com/api/v1/todo/getAllTodos",{
         headers:{
           "Content-type" : "Application/json",
           "token" : localStorage.getItem("token")

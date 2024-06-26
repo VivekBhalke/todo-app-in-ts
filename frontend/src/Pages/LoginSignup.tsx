@@ -13,7 +13,7 @@ const LoginSignup = () => {
   const setUser= useSetRecoilState(user); 
   const handleLogin = async (event : any)=>{
     event.preventDefault();
-    const response = await axios.post("http://localhost:3000/api/v1/user/login",{
+    const response = await axios.post("https://todo-app-in-ts-5.onrender.com/api/v1/user/login",{
         email,password
     },{
         headers:{
@@ -34,7 +34,7 @@ const LoginSignup = () => {
   }
   const handleSignup = async (event : any)=>{
     event.preventDefault();
-    const response = await axios.post("http://localhost:3000/api/v1/user/signup",{
+    const response = await axios.post("https://todo-app-in-ts-5.onrender.com/api/v1/user/signup",{
         email,password,name
     },{
         headers:{

@@ -19,7 +19,7 @@ const AddTodo = () => {
     const setTodos = useSetRecoilState(todos);
     const handleAddTodo = async (event : any)=>{
         event.preventDefault();
-        const response = await axios.post("http://localhost:3000/api/v1/todo/addTodo" , {
+        const response = await axios.post("https://todo-app-in-ts-5.onrender.com/api/v1/todo/addTodo" , {
             title ,
             description
         } , {
