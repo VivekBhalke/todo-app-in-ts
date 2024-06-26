@@ -25,8 +25,9 @@ function me(req, res) {
         const object = {
             email: user.email,
             name: user.name,
+            id: user._id
         };
-        return res.json(object);
+        return res.json({ object: object });
     });
 }
 exports.default = me;

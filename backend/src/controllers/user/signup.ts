@@ -9,7 +9,7 @@ export default async function signupController(req  : Request , res:Response){
     try {
         const email = req.body.email;
         const password = req.body.password;
-
+        const name = req.body.name;
         const result = await User.find({});
         let presentEmail = false;
         let presentPassword = false;
@@ -52,7 +52,7 @@ export default async function signupController(req  : Request , res:Response){
                         let user = new User({
                             email : email ,
                             password : hashedPassword,
-                            name : array[0]
+                            name : name == null ? array[0] : name
                         });
             
                         await user.save();

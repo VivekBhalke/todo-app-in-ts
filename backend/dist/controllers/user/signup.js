@@ -22,6 +22,7 @@ function signupController(req, res) {
         try {
             const email = req.body.email;
             const password = req.body.password;
+            const name = req.body.name;
             const result = yield User_1.default.find({});
             let presentEmail = false;
             let presentPassword = false;
@@ -55,7 +56,7 @@ function signupController(req, res) {
                         let user = new User_1.default({
                             email: email,
                             password: hashedPassword,
-                            name: array[0]
+                            name: name == null ? array[0] : name
                         });
                         yield user.save();
                         const Secret = process.env.SECERT;

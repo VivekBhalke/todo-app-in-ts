@@ -1,8 +1,13 @@
-import React from 'react'
+import { RecoilRoot } from "recoil"
+import InitUser from "./InitUser"
 
 const App = () => {
   return (
-    <div>App</div>
+
+      <RecoilRoot>
+        <InitUser/>
+      </RecoilRoot>
+
   )
 }
 
